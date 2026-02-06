@@ -1,9 +1,16 @@
 <div class="container-fluid h-100">
     <div class="row h-100">
         <div class="side-bar">
-            Side Bar
+            <app-main-layout-sidebar-menu-item
+                (onToggleExpandMenuItem)="store.dispatch(MainLayoutActions.ToggleExpandMenuItemAction($event))"
+                (onSelectMenuItem)="store.dispatch(MainLayoutActions.SelectMenuItemAction($event))"
+                [menuItems]="(sidebarMenuItems$ | async) ?? []"
+                [activedMenuItemId]="(activedMenuItemId$ | async) ?? undefined"
+            >
+            </app-main-layout-sidebar-menu-item>
         </div>
         <div class="col p-0">
+            <router-outlet></router-outlet>
         </div>
     </div>
 </div>

@@ -1,0 +1,31 @@
+@for (item of menuItems; track item.id) {
+    <div
+        class="menu-item"
+        (click)="item.children?.length
+            ? onToggleExpandMenuItem.emit({ itemId: item.id })
+            : onSelectMenuItem.emit({ itemId: item.id })"
+        [ngClass]="{
+            'active': item.id == activedMenuItemId,
+            'button': !item.children || item.children.length == 0,
+        }"
+        [ngStyle]="{
+            'padding-left.px': (level * 15) + 5
+        }"
+    >
+        {{ item.name }}
+        @if (item.children && item.children.length > 0) {
+            <i class="fa {{ item.isExpanded ? 'fa-angle-up' : 'fa-angle-down' }}" aria-hidden="true"></i>
+        }
+    </div>
+
+    @if (item.children && item.children.length > 0 && item.isExpanded) {
+        <app-main-layout-sidebar-menu-item
+            (onToggleExpandMenuItem)="onToggleExpandMenuItem.emit($event)"
+            (onSelectMenuItem)="onSelectMenuItem.emit($event)"
+            [menuItems]="item.children"
+            [level]="level + 1"
+            [activedMenuItemId]="activedMenuItemId"
+        >
+        </app-main-layout-sidebar-menu-item>
+    }
+}
