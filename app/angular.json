@@ -9,18 +9,17 @@
         "@schematics/angular:component": {
           "style": "scss",
           "skipTests": true,
-          "flat": true,
-          "path": "src/app/components"
+          "type": "component"
         },
         "@schematics/angular:service": {
           "skipTests": true,
-          "flat": true,
-          "path": "src/app/services"
+          "path": "src/app/services",
+          "type": "service"
         },
         "@schematics/angular:directive": {
           "skipTests": true,
-          "flat": true,
-          "path": "src/app/directives"
+          "path": "src/app/directives",
+          "type": "directive"
         }
       },
       "root": "",
