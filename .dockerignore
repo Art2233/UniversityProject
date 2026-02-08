@@ -1,0 +1,14 @@
+# Ignore node_modules
+node_modules
+/app/node_modules
+
+# Ignore build output
+/app/dist
+
+# Ignore git files
+.git
+.gitignore
+
+# Ignore docker files
+Dockerfile
+.dockerignore
