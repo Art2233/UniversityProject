@@ -1,0 +1,63 @@
+.app-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--mat-sys-color-surface-container-low);
+    border-bottom: 1px solid var(--mat-sys-color-outline-variant);
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    padding: 8px 16px;
+    min-height: 64px;
+
+    .content {
+        display: flex;
+        align-items: center;
+        min-width: 0;
+        flex: 1 1 0;
+    }
+
+    .inner {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+    }
+}
+
+.app-logo {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    width: 220px;
+    cursor: pointer;
+
+    .logo-img {
+        display: block;
+        width: 100%;
+        max-height: 48px;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+.app-sidenav-container {
+    flex: 1;
+    background-color: var(--mat-sys-color-surface);
+}
+
+.app-sidebar {
+    background-color: var(--mat-sys-color-surface-container);
+    border-right: 1px solid var(--mat-sys-color-outline-variant);
+    padding: 16px;
+}
+
+.app-main-content {
+    padding: 16px;
+    overflow: auto;
+}

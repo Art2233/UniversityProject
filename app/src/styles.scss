@@ -3,14 +3,14 @@
 
 // materials
 html {
-  @include mat.theme((
-    color: (
-      primary: m3-theme.$primary-palette,
-      tertiary: m3-theme.$tertiary-palette,
-      ),
-    typography: Roboto,
-    density: 0,
-  ));
+    @include mat.theme((
+        color: (
+            primary: m3-theme.$primary-palette,
+            typography: Roboto,
+        ),
+        typography: Roboto,
+        density: 0,
+    ));
 }
 
 html, body {

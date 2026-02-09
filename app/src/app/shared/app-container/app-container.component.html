@@ -1,0 +1,25 @@
+<div class="app-layout">
+    <header class="app-header">
+        <div class="inner">
+            <div class="app-logo">
+                <img class="logo-img" [src]="logoSrc" [alt]="logoAlt" />
+            </div>
+
+            <div class="content">
+                <app-header></app-header>
+            </div>
+        </div>
+    </header>
+
+    <mat-sidenav-container class="app-sidenav-container">
+        @if (sidebar) {
+            <mat-sidenav class="app-sidebar" mode="side" opened [style.width.px]="300">
+                <ng-container *ngTemplateOutlet="sidebar"></ng-container>
+            </mat-sidenav>
+        }
+
+        <mat-sidenav-content class="app-main-content">
+            <ng-container *ngTemplateOutlet="content"></ng-container>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

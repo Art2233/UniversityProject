@@ -1,0 +1,45 @@
+<mat-toolbar class="app-header-toolbar">
+    <div class="app-header-left">
+        <button
+            mat-icon-button
+            type="button"
+            class="app-notifications-btn"
+            aria-label="Notifications"
+            matBadgeColor="warn"
+            [matBadge]="notificationsCount"
+            [matBadgeHidden]="!notificationsCount"
+            matBadgePosition="above after"
+        >
+            <mat-icon>notifications</mat-icon>
+        </button>
+    </div>
+
+    <div class="app-header-right">
+        <button
+            mat-button
+            type="button"
+            class="app-user-btn"
+            [matMenuTriggerFor]="userMenu"
+            aria-label="User menu"
+        >
+            <span class="app-user-avatar" aria-hidden="true">
+                <mat-icon>account_circle</mat-icon>
+            </span>
+    
+            <mat-icon class="app-user-chevron">expand_more</mat-icon>
+            <span class="app-user-name">{{ username }}</span>
+        </button>
+    </div>
+
+    <mat-menu #userMenu="matMenu">
+        <button mat-menu-item type="button">
+            <mat-icon>person</mat-icon>
+            <span>Profile</span>
+        </button>
+
+        <button mat-menu-item type="button">
+            <mat-icon>logout</mat-icon>
+            <span>Logout</span>
+        </button>
+    </mat-menu>
+</mat-toolbar>
