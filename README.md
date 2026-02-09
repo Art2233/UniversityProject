@@ -27,3 +27,18 @@ Run `npm start` or `ng serve` to start the development server. Navigate to `http
 ## Build
 
 Run `npm run build` or `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Docker
+
+If you prefer to run the application using Docker and docker-compose, you can start the services from the project root (where `docker-compose.yml` is located) with one of the following commands:
+
+```bash
+# build images and run containers in the background
+docker-compose up -d --build
+# or, with Docker Compose v2:
+docker compose up -d --build
+```
+
+Notes:
+- Make sure Docker is installed and the Docker daemon is running.
+- Run the commands from the repository root (or from the folder that contains `docker-compose.yml`).
