@@ -57,3 +57,18 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Docker
+
+If you prefer to run the application using Docker and docker-compose, you can start the services from the project root (where `docker-compose.yml` is located) with one of the following commands:
+
+```bash
+# build images and run containers in the background
+docker-compose up -d --build
+# or, with Docker Compose v2:
+docker compose up -d --build
+```
+
+Notes:
+- Make sure Docker is installed and the Docker daemon is running.
+- Run the commands from the repository root (or from the folder that contains `docker-compose.yml`).
