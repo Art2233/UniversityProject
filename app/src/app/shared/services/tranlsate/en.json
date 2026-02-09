@@ -2,5 +2,8 @@
     "UKRAINIAN": "Ukrainian",
     "ENGLISH": "English",
     "PROFILE": "Profile",
-    "LOG_OUT": "Log out"
+    "LOG_OUT": "Log out",
+    "DOCUMENTS": "Documents",
+    "SETTINGS": "Settings",
+    "STUDENTS": "Students"
 }

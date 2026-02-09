@@ -55,11 +55,20 @@
 
 .app-sidebar {
     background-color: var(--mat-sys-color-surface-container);
-    border-right: 1px solid var(--mat-sys-color-outline-variant);
-    padding: 16px;
+    border-right: 1px solid var(--mat-sys-surface-variant);
+    display: flex;
+    flex-direction: column;
+
+    .content {
+        padding: 10px 16px;
+        flex: 1 1 auto;
+        min-height: 0;
+        overflow: auto;
+    }
 }
 
 .app-main-content {
-    padding: 16px;
+    padding:16px;
     overflow: auto;
+    background-color: var(--mat-sys-surface-container-low);
 }

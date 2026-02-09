@@ -1,14 +1,14 @@
 <app-container>
     <ng-template #sidebar>
-        <p>Навігація</p>
-        <ul>
-            <li>Пункт 1</li>
-            <li>Пункт 2</li>
-        </ul>
+        <app-main-layout-sidebar
+            (onSelectMenuItem)="store.dispatch(SelectMenuItem($event))"
+            [menuItems]="(sidebarMenu$ | async) ?? []"
+            [selectedMenuItemId]="(selectedMenuItemId$ | async) ?? undefined"
+        >
+        </app-main-layout-sidebar>
     </ng-template>
 
     <ng-template #content>
-        <h1>Головний контент</h1>
-        <p>Тут буде вміст...</p>
+        <router-outlet></router-outlet>
     </ng-template>
 </app-container>
