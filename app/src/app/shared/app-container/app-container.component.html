@@ -35,7 +35,9 @@
         }
 
         <mat-sidenav-content class="app-main-content">
-            <ng-container *ngTemplateOutlet="content"></ng-container>
+            <div class="content-wrapper">
+                <ng-container *ngTemplateOutlet="content"></ng-container>
+            </div>
         </mat-sidenav-content>
     </mat-sidenav-container>
 </div>

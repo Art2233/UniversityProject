@@ -15,5 +15,21 @@
     "SIGNED": "Signed by all",
     "PENDING": "Pending signature",
     "REJECTED": "Rejected",
-    "UPLOAD": "Upload"
+    "UPLOAD": "Upload",
+    "STUDENTS_SUBTITLE": "Manage student list and their statuses",
+    "ADD_STUDENT": "Add Student",
+    "SEARCH_BY_NAME_OR_EMAIL": "Search by name or email",
+    "GROUP": "Group",
+    "ALL_GROUPS": "All groups",
+    "ALL_STATUSES": "All statuses",
+    "STUDYING": "Studying",
+    "EXPELLED": "Expelled",
+    "STUDENT": "Student",
+    "COURSE": "Course",
+    "EDIT": "Edit",
+    "DELETE": "Delete",
+    "ACADEMIC_LEAVE": "Academic leave",
+    "STUDIES": "Studying",
+    "ACADEMIC": "Academic leave",
+    "EXPELLED_STATUS": "Expelled"
 }

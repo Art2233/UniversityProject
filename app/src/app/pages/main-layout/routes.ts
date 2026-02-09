@@ -8,6 +8,10 @@ export const mainLayoutRoutes: Routes = [
             {
                 path: 'documents',
                 loadComponent: () => import('./children-pages/documents/documents.component').then(m => m.DocumentsComponent),
+            },
+            {
+                path: 'students',
+                loadComponent: () => import('./children-pages/students/students.component').then(m => m.StudentsComponent),
             }
         ]
     }

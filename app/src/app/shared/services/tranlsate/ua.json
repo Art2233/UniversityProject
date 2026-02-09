@@ -15,5 +15,21 @@
     "SIGNED": "Підписаний всіма",
     "PENDING": "Очікує підпису",
     "REJECTED": "Відхилений",
-    "UPLOAD": "Завантажити"
+    "UPLOAD": "Завантажити",
+    "STUDENTS_SUBTITLE": "Управління списком студентів та їх статусами",
+    "ADD_STUDENT": "Додати студента",
+    "SEARCH_BY_NAME_OR_EMAIL": "Пошук за ім'ям або email",
+    "GROUP": "Група",
+    "ALL_GROUPS": "Всі групи",
+    "ALL_STATUSES": "Всі статуси",
+    "STUDYING": "Навчається",
+    "EXPELLED": "Відрахований",
+    "STUDENT": "Студент",
+    "COURSE": "Курс",
+    "EDIT": "Редагувати",
+    "DELETE": "Видалити",
+    "ACADEMIC_LEAVE": "Академ. відпустка",
+    "STUDIES": "Навчається",
+    "ACADEMIC": "Академ. відпустка",
+    "EXPELLED_STATUS": "Відрахований"
 }

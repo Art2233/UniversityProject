@@ -1,0 +1,99 @@
+<div class="filters-card">
+    <mat-form-field
+        appearance="outline"
+        class="search-field">
+
+        <mat-icon matPrefix>search</mat-icon>
+        <input
+            matInput
+            [placeholder]="'SEARCH_BY_NAME_OR_EMAIL' | translate"
+        >
+
+    </mat-form-field>
+</div>
+
+<div class="table-wrapper">
+    <table mat-table [dataSource]="dataSource" class="students-table">
+
+        <ng-container matColumnDef="name">
+            <th
+                mat-header-cell
+                *matHeaderCellDef
+            >
+                {{ 'STUDENT' | translate }}
+            </th>
+
+            <td
+                mat-cell
+                *matCellDef="let element"
+            >
+                <div class="student-info">
+                    <div class="avatar-circle">{{ element.initials }}</div>
+                    <div class="text-info">
+                        <span class="name">{{ element.name }}</span>
+                        <span class="email">{{ element.email }}</span>
+                    </div>
+                </div>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="group">
+            <th
+                mat-header-cell
+                *matHeaderCellDef
+            >
+                {{ 'GROUP' | translate }}
+            </th>
+            <td
+                mat-cell
+                *matCellDef="let element"
+            >
+                <span class="group-badge">{{ element.group }}</span>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="course">
+            <th 
+                mat-header-cell
+                *matHeaderCellDef
+            >
+                {{ 'COURSE' | translate }}
+            </th>
+            <td
+                mat-cell
+                *matCellDef="let element"
+            > 
+                {{ element.course }}
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="status">
+            <th
+                mat-header-cell
+                *matHeaderCellDef
+            > {{ 'STATUS' | translate }} </th>
+            <td
+                mat-cell
+                *matCellDef="let element"
+            >
+                <span
+                    class="status-indicator"
+                    [ngClass]="element.status.class"
+                >
+                    <span class="dot"></span>
+                    {{ element.status.text | translate }}
+                </span>
+            </td>
+        </ng-container>
+
+        <tr
+            mat-header-row
+            *matHeaderRowDef="displayedColumns"
+        ></tr>
+        <tr
+            mat-row
+            *matRowDef="let row; columns: displayedColumns;"
+            class="student-row"
+        ></tr>
+    </table>
+</div>
