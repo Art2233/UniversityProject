@@ -5,5 +5,15 @@
     "LOG_OUT": "Log out",
     "DOCUMENTS": "Documents",
     "SETTINGS": "Settings",
-    "STUDENTS": "Students"
+    "STUDENTS": "Students",
+    "INCOMING_DOCUMENTS": "Incoming Documents",
+    "DATE": "Date",
+    "DOCUMENT": "Document",
+    "NUMBER": "Number",
+    "STATUS": "Status",
+    "TYPE": "Type",
+    "SIGNED": "Signed by all",
+    "PENDING": "Pending signature",
+    "REJECTED": "Rejected",
+    "UPLOAD": "Upload"
 }

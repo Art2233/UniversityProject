@@ -1,0 +1,119 @@
+@use 'sass:map';
+@use '../../../../../styles/theme-colors' as theme;
+
+@function color($palette-name, $tone) {
+    @return map.get(map.get(theme.$palettes, $palette-name), $tone);
+}
+
+.doc-container {
+    background-color: color(neutral, 98);
+    padding: 24px;
+    min-height: 100vh;
+}
+
+.page-header h1 {
+    color: color(neutral, 10);
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.table-wrapper {
+    background: color(neutral, 100);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid color(neutral-variant, 80);
+}
+
+.doc-table {
+    width: 100%;
+
+    th.mat-header-cell {
+        color: color(neutral, 20);
+        font-weight: 600;
+
+        border-bottom: 1px solid color(neutral-variant, 90);
+        padding: 16px;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        color: #546E7A;
+    }
+
+    td.mat-cell {
+        color: color(neutral-variant, 30);
+        font-size: 14px;
+        border-bottom: 1px solid color(neutral-variant, 95);
+        padding: 12px;
+    }
+
+    .doc-row:hover {
+        background-color: color(primary, 95);
+        cursor: pointer;
+    }
+}
+
+.name-cell {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    color: color(primary, 40);
+}
+
+.doc-badge-icon {
+    background-color: color(secondary, 90);
+    color: color(secondary, 10);
+
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.text-gray {
+    color: color(neutral, 50);
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+
+    &.signed {
+        background-color: #a8ffcc94;
+        color: color(tertiary, 10);
+    }
+
+    &.waiting {
+        background-color: color(tertiary, 90);
+        color: color(secondary, 10);
+    }
+
+    &.rejected {
+        background-color: color(error, 90);
+        color: color(error, 10);
+    }
+}
+
+.mat-column-select {
+    width: 48px;
+    padding-left: 24px !important;
+}
+
+.mat-column-select {
+    width: 48px;
+    padding-left: 24px !important;
+}
+
+.table-footer {
+    padding-top: 20px;
+}
+
+.btn-section {
+    margin-top: 10px;
+}

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AppContainerComponent } from '../../shared/app-container/app-container.component';
 import { MainLayoutSidebarComponent } from './components/main-layout-sidebar/main-layout-sidebar.component';
 import { Store } from '@ngrx/store';
@@ -7,6 +7,7 @@ import { selectCurrentMenuItemId, selectMenuItems } from './storage/entities/sid
 import { AsyncPipe } from '@angular/common';
 import { SelectMenuItem } from './storage/entities/sidebar/actions';
 import { RouterOutlet } from '@angular/router';
+import { InitAction } from './storage/entities/main/actions';
 
 @Component({
     selector: 'app-main-layout',
@@ -14,7 +15,7 @@ import { RouterOutlet } from '@angular/router';
     templateUrl: './main-layout.component.html',
     styleUrl: './main-layout.component.scss',
 })
-export class MainLayoutComponent {
+export class MainLayoutComponent implements OnInit{
     sidebarMenu$ = this.store.select(selectMenuItems);
     selectedMenuItemId$ = this.store.select(selectCurrentMenuItemId);
 
@@ -23,4 +24,8 @@ export class MainLayoutComponent {
     constructor(
         public store: Store<IStore>,
     ) {}
+
+    ngOnInit(): void {
+        this.store.dispatch(InitAction());
+    }
 }

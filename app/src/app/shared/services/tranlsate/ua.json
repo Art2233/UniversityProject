@@ -5,5 +5,15 @@
     "LOG_OUT": "Вихід",
     "DOCUMENTS": "Документи",
     "SETTINGS": "Налаштування",
-    "STUDENTS": "Студенти"
+    "STUDENTS": "Студенти",
+    "INCOMING_DOCUMENTS": "Вхідні документи",
+    "DATE": "Дата",
+    "DOCUMENT": "Документ",
+    "NUMBER": "Номер",
+    "STATUS": "Статус",
+    "TYPE": "Тип",
+    "SIGNED": "Підписаний всіма",
+    "PENDING": "Очікує підпису",
+    "REJECTED": "Відхилений",
+    "UPLOAD": "Завантажити"
 }
