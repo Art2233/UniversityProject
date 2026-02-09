@@ -4,6 +4,38 @@
             mat-icon-button
             type="button"
             class="app-notifications-btn"
+            [matMenuTriggerFor]="languageMenu"
+        >
+            <mat-icon>language</mat-icon>
+        </button>
+        <mat-menu #languageMenu="matMenu">
+            @if (currentLanguage != 'ua') {
+                <button
+                    mat-menu-item
+                    type="button"
+                    (click)="onLanguageChange.emit({ language: 'ua' })"
+                >
+                    <span>{{ 'UKRAINIAN' | translate }}</span>
+                </button>
+    
+            }
+
+            @if (currentLanguage != 'en') {
+                <button
+                    mat-menu-item
+                    type="button"
+                    (click)="onLanguageChange.emit({ language: 'en' })"
+                >
+                    <span>{{ 'ENGLISH' | translate }}</span>
+                </button>
+            }
+        </mat-menu>
+
+
+        <button
+            mat-icon-button
+            type="button"
+            class="app-notifications-btn"
             aria-label="Notifications"
             matBadgeColor="warn"
             [matBadge]="notificationsCount"
@@ -20,26 +52,28 @@
             type="button"
             class="app-user-btn"
             [matMenuTriggerFor]="userMenu"
-            aria-label="User menu"
         >
-            <span class="app-user-avatar" aria-hidden="true">
+            <div class="app-user-avatar">
                 <mat-icon>account_circle</mat-icon>
-            </span>
-    
-            <mat-icon class="app-user-chevron">expand_more</mat-icon>
+            </div>
+            
             <span class="app-user-name">{{ username }}</span>
+            
+            <div class="app-user-chevron">
+                <mat-icon iconPositionEnd>expand_more</mat-icon>
+            </div>
         </button>
     </div>
 
     <mat-menu #userMenu="matMenu">
         <button mat-menu-item type="button">
             <mat-icon>person</mat-icon>
-            <span>Profile</span>
+            <span>{{ 'PROFILE' | translate }}</span>
         </button>
 
         <button mat-menu-item type="button">
             <mat-icon>logout</mat-icon>
-            <span>Logout</span>
+            <span>{{ 'LOG_OUT' | translate }}</span>
         </button>
     </mat-menu>
 </mat-toolbar>

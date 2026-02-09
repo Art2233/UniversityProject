@@ -11,9 +11,11 @@
     background-color: var(--mat-sys-color-surface-container-low);
     border-bottom: 1px solid var(--mat-sys-color-outline-variant);
     z-index: 100;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     padding: 8px 16px;
     min-height: 64px;
+    position: relative;
+    z-index: 10;
 
     .content {
         display: flex;
